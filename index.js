@@ -11,8 +11,8 @@ app.use(express.json());
 app.use(authRoutes);
 app.use(validateUser, postRoutes);
 
-// mongodb+srv://jignesh:dUaszhl26B0rpW0f@cluster0.s7hzif4.mongodb.net/
-mongoose.connect("mongodb://localhost:27017/blogApp")
+
+mongoose.connect("mongodb+srv://jignesh:dUaszhl26B0rpW0f@cluster0.s7hzif4.mongodb.net/")
 .then(()=> console.log("Db connection successful"))
 .catch(()=> console.log("Error while DB connection !"));
 
